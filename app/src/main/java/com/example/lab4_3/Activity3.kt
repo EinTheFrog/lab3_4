@@ -1,10 +1,9 @@
-package com.example.lab4_2
+package com.example.lab4_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lab4_2.databinding.Activity3Binding
+import com.example.lab4_3.databinding.Activity3Binding
 
 class Activity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,13 +13,13 @@ class Activity3 : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnToSecond.setOnClickListener {
-            setResult(2)
             finish()
         }
 
         binding.btnToFirst.setOnClickListener {
-            setResult(1)
-            finish()
+            val intent = Intent(this, Activity1::class.java, )
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
         }
 
         binding.btnToAbout.setOnClickListener {

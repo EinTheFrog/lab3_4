@@ -1,11 +1,9 @@
-package com.example.lab4_2
+package com.example.lab4_3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.navigation.Navigation
-import com.example.lab4_2.databinding.Activity1Binding
+import com.example.lab4_3.databinding.Activity1Binding
 
 
 class Activity1 : AppCompatActivity() {
