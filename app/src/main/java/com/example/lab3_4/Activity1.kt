@@ -1,9 +1,9 @@
-package com.example.lab4_3
+package com.example.lab3_4
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.lab4_3.databinding.Activity1Binding
+import com.example.lab3_4.databinding.Activity1Binding
 
 
 class Activity1 : AppCompatActivity() {
@@ -17,8 +17,13 @@ class Activity1 : AppCompatActivity() {
         binding.btnToSecond.setOnClickListener {
             goToSecond()
         }
+
         binding.btnToAbout.setOnClickListener {
             goToAbout()
+        }
+
+        binding.btnToDont.setOnClickListener {
+            goToDont()
         }
     }
 
@@ -29,6 +34,12 @@ class Activity1 : AppCompatActivity() {
 
     private fun goToAbout() {
         val intent = Intent(this, ActivityAbout::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToDont() {
+        val intent = Intent(this, ActivityDont::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         startActivity(intent)
     }
 }

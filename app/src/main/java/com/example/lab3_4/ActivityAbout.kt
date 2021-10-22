@@ -1,8 +1,8 @@
-package com.example.lab4_3
+package com.example.lab3_4
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lab4_3.databinding.ActivityAboutBinding
+import com.example.lab3_4.databinding.ActivityAboutBinding
 
 class ActivityAbout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
